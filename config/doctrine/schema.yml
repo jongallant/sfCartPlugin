@@ -1,0 +1,74 @@
+Category:
+  tableName: sfCartCategory
+  actAs: 
+    Timestampable: ~
+    Sluggable:
+      fields: [name]
+      unique: true
+    NestedSet:
+      hasManyRoots: true
+      rootColumnName: root_id
+  columns:
+    name:        { type: string(80), notnull: true }
+    active:      { type: boolean }
+  relations:
+    Categories:  { class: Category, local: id, foreign: root_id }
+    
+Tax:
+  tableName: sfCartTax
+  actAs:
+    Timestampable: ~
+  columns:
+    region_code:  { type: string(80), notnull: true }
+    rate:   { type: double, notnull: true, default: 0 }
+    
+Product:
+  tableName: sfCartProduct
+  actAs:
+    Timestampable: ~
+    Sluggable:
+      fields: [name]
+      unique: true
+    Searchable:
+      fields: [name, code]
+  columns:
+    name:           { type: string(100), notnull: true }
+    code:           { type: string(100) }
+    description:    { type: string(4000) }
+    weight:         { type: double }
+    photo_path:     { type: string(400) }
+    quantity:       { type: integer, notnull: true }
+    price:          { type: double, notnull: true }
+    saleprice:      { type: double, notnull: false }
+    active:         { type: boolean, default: 1 }
+  relations:
+    Categories:     { class: Category, local: product_id, foreign: category_id, refClass: ProductCategory, foreignAlias: Products }
+
+ProductCategory:
+  tableName: sfCartProductCategory
+  options:
+    actAs: [Timestampable]
+  columns:
+    product_id: { type: integer, primary: true }
+    category_id: { type: integer, primary: true }
+  relations:
+    Product:  { class: Product, local: product_id, foreign: id, onDelete: CASCADE }
+    Category: { class: Category, local: category_id, foreign: id, onDelete: CASCADE }
+
+Coupon:
+  tableName: sfCartCoupon
+  actAs: { Timestampable: ~ }
+  columns:
+    code:     { type: string(20), notnull: true}
+    discount: { type: double, notnull: true, default: 0 }
+    start:    { type: datetime }
+    end:      { type: datetime }
+    active:   { type: boolean, notnull: true, default: 1 }
+    minprice: { type: double, notnull: true }
+    
+Settings:
+  tableName: sfSettings
+  actAs: { Timestampable: ~ }
+  columns:
+    name:   { type: string(100), notnull: true }
+    value:  { type: string(100), notnull: true }

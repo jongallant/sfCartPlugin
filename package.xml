@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfCartPlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>E-Commerce Solution</summary>
+ <description>This is a e-commerce solution created for symfony 1.4.  It currently supports shipping calculations from UPS (US) and Purolator (Canada).  It also supports PayPal Standard checkout.</description>
+ <lead>
+  <name>Jonathan Gallant</name>
+  <user>jongallant</user>
+  <email>jongallant@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2011-04-23</date>
+ <time>12:29:55</time>
+ <version>
+  <release>1.0.2</release>
+  <api>1.0.2</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+ <notes>
+Some programming skills are required in order to get the most out of this plugin.
+ </notes>
+ <contents>
+  <dir baseinstalldir="/sfCartPlugin" name="/">
+   <file baseinstalldir="/sfCartPlugin" md5sum="4e3c0dad1c382ad0af218ad3402986f0" name="config/routing.yml" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="4c8a0113fe2ae9b4822ac86ba59238f3" name="config/sfCartPluginConfiguration.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e4026eca29d0bd41fa1ffd8cb4d05878" name="config/doctrine/schema.yml" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="cac7b2da32cc09f1113b53712922bc3a" name="data/fixtures/fixtures.yml" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="008f1089496125e4bffba0cc7f1f08ae" name="lib/cart.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e264c1de195502a329caf4d47b688ea3" name="lib/cartCore.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="f84fabfb47a7235e4ca425ee7b2de645" name="lib/OrderMessage.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2e2f86084ee9914ffd1a53c6425e732a" name="lib/filter/doctrine/PluginCategoryFormFilter.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="de1e76d5ee17a469b4d908d9320c5c3e" name="lib/filter/doctrine/PluginCouponFormFilter.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="d599331969c0a6a59f4a7c64dd39fda7" name="lib/filter/doctrine/PluginProductCategoryFormFilter.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="1f678977cb70346a3c58ef68a2f26fd3" name="lib/filter/doctrine/PluginProductFormFilter.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b4bb5ca5f0fa67434d71cc5a38f78e1d" name="lib/filter/doctrine/PluginProductIndexFormFilter.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6ab11f7e07e0d0b5fb0e1a07df36a3df" name="lib/filter/doctrine/PluginSettingsFormFilter.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ad2cccc4a0e86cbeb29b61ce891cc6fc" name="lib/filter/doctrine/PluginTaxFormFilter.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="4d96272747aac801a3624fb2181f258c" name="lib/form/doctrine/myValidatedFile.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5747ee55c2c09182f39fbce2ee9e9ea1" name="lib/form/doctrine/PluginCategoryForm.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="cdf6e9de7d18daf2a99bcb6d2cf7a75c" name="lib/form/doctrine/PluginCategorySelectionForm.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e32c2e183bc536ad49c768fcb2a9a58b" name="lib/form/doctrine/PluginCouponForm.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a2db823259add166d11aeb093e4bf175" name="lib/form/doctrine/PluginProductCategoryForm.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ec639c1854155da647dd50b5ed858b49" name="lib/form/doctrine/PluginProductForm.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e886d1620c615e661dd7a2b0eeb68bc4" name="lib/form/doctrine/PluginProductIndexForm.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e82302f03a84ccab20fb6075dff9fa3d" name="lib/form/doctrine/PluginSettingsForm.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9f4cf7824e13da8288e67bd8a7b89d88" name="lib/form/doctrine/PluginTaxForm.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2ce0a71375d1fb2a17ad54127cc7c7ea" name="lib/form/doctrine/ValidatorChoiceNestedSet.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7351d59e1397a3bc93b38c7cf094a087" name="lib/form/doctrine/WidgetChoiceNestedSet.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="fea34c07703d8d1810dcfcf8d98c6f9b" name="lib/form/doctrine/WidgetCKEditor.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="49d410e7498c37f6acddf2a575801cb7" name="lib/form/doctrine/plugins/a11yhelp/dialogs/a11yhelp.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7dcf914734d601e5bbc210a70e3d6d7f" name="lib/form/doctrine/plugins/a11yhelp/lang/en.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5536671cb65757696c99850106e1e43e" name="lib/form/doctrine/plugins/a11yhelp/lang/he.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="44ae86c2de16a2c66c5353eab3daa92e" name="lib/form/doctrine/plugins/about/dialogs/about.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="18203e6508e7cf786fb60093744881aa" name="lib/form/doctrine/plugins/about/dialogs/logo_ckeditor.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9fecbc148d70234d80891bff0e36587b" name="lib/form/doctrine/plugins/adobeair/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7b40f7b857f8a16f4e5440a928789313" name="lib/form/doctrine/plugins/autogrow/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="873525c23c8d30e10ec1a37d55ed7587" name="lib/form/doctrine/plugins/clipboard/dialogs/paste.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="157e97cd285fb09746cbf441110f3735" name="lib/form/doctrine/plugins/colordialog/dialogs/colordialog.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5ed2db81810f5e11458a6893831de470" name="lib/form/doctrine/plugins/dialog/dialogDefinition.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="f0e85b6cdbc9d05f007c67cc5146a78a" name="lib/form/doctrine/plugins/div/dialogs/div.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="3cf97473278d8d8121699762becacee3" name="lib/form/doctrine/plugins/find/dialogs/find.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2b2b9cbff9129bcf0aa45c704c9592f2" name="lib/form/doctrine/plugins/flash/dialogs/flash.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e9ac9384237d8d1cdaab68d31a22005d" name="lib/form/doctrine/plugins/flash/images/placeholder.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="953aada27e9b3e77a43aaee4600e46a9" name="lib/form/doctrine/plugins/forms/dialogs/button.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0fd1b32b312b12a2033f1123428e6de2" name="lib/form/doctrine/plugins/forms/dialogs/checkbox.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="3b26770e1c67dff9afcc6e6721c41355" name="lib/form/doctrine/plugins/forms/dialogs/form.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="27eb0afb684a58df8cd921c29cb87761" name="lib/form/doctrine/plugins/forms/dialogs/hiddenfield.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5a3037cc83525e33a958ffd33e8b89bf" name="lib/form/doctrine/plugins/forms/dialogs/radio.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="91941b91684e8694a4576b1795c107d8" name="lib/form/doctrine/plugins/forms/dialogs/select.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7777159fab52028c5fe3e53c7f6829c2" name="lib/form/doctrine/plugins/forms/dialogs/textarea.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="575200ca2082b9049c3beaba647f9e0c" name="lib/form/doctrine/plugins/forms/dialogs/textfield.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c724101436b085bf318e695fd784d658" name="lib/form/doctrine/plugins/forms/images/hiddenfield.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="cc53e759b5cef8114f26ca1510354352" name="lib/form/doctrine/plugins/iframe/dialogs/iframe.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="952e216a7803312fa67ee61c06f3c532" name="lib/form/doctrine/plugins/iframe/images/placeholder.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9a9c9dd9a205927f71bcc41ebfebb87f" name="lib/form/doctrine/plugins/iframedialog/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="694b9e97ca11cca56d3eb0dcc8e7bbc4" name="lib/form/doctrine/plugins/image/dialogs/image.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="31b3323b736d65a0269960da3de52f1c" name="lib/form/doctrine/plugins/link/dialogs/anchor.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9caf789fe7f587afd1c3f558062bd699" name="lib/form/doctrine/plugins/link/dialogs/link.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="60a2121d55f9238f529458ee5f2e6e4e" name="lib/form/doctrine/plugins/link/images/anchor.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="fc1f650dcf1ed1592bdb04e4768e98f7" name="lib/form/doctrine/plugins/liststyle/dialogs/liststyle.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="59caae8ab95b2eeba9444ba219446c75" name="lib/form/doctrine/plugins/pagebreak/images/pagebreak.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="8ade1cbdad2b791de72a8889e810d21b" name="lib/form/doctrine/plugins/pastefromword/filter/default.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="97c2a5d84276f719d6fc5502b734fdee" name="lib/form/doctrine/plugins/pastetext/dialogs/pastetext.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="090274dbcc2f5a50ea1086d948ca85ab" name="lib/form/doctrine/plugins/placeholder/placeholder.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="dff472ad724b8d2938958851a5aaf4dd" name="lib/form/doctrine/plugins/placeholder/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6ad1b35ed93c0bd016a7d0a2843e49a2" name="lib/form/doctrine/plugins/placeholder/dialogs/placeholder.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="39c5693e061c342e606e189f4f39f3c9" name="lib/form/doctrine/plugins/placeholder/lang/en.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9a79db98165b19ee9a06357afcb1c358" name="lib/form/doctrine/plugins/scayt/dialogs/options.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0f7afdba1e88aa091b63158eb5c16b2a" name="lib/form/doctrine/plugins/scayt/dialogs/toolbar.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5a24be2dbcae65e78db23bf732ae39fd" name="lib/form/doctrine/plugins/showblocks/images/block_address.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="198d39094c81152155f8f35108845bbe" name="lib/form/doctrine/plugins/showblocks/images/block_blockquote.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="05e8b4037cfbb469f9ddc37e8fc9e970" name="lib/form/doctrine/plugins/showblocks/images/block_div.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2c56066f59944c0167a8e4321f193913" name="lib/form/doctrine/plugins/showblocks/images/block_h1.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="060e9e0bb5a4e5dc1fe0d2fb20b2c801" name="lib/form/doctrine/plugins/showblocks/images/block_h2.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5468e59e8840a0a6799d6db5d36733dc" name="lib/form/doctrine/plugins/showblocks/images/block_h3.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6c65bfeac7e5b5b28af498f2d757f3f0" name="lib/form/doctrine/plugins/showblocks/images/block_h4.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="4f196e19ed8ad0fdd14cb73c93fee1ab" name="lib/form/doctrine/plugins/showblocks/images/block_h5.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="dde71309b78bdb3b366654446adea123" name="lib/form/doctrine/plugins/showblocks/images/block_h6.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b4f2152a14d790847565aa176161acab" name="lib/form/doctrine/plugins/showblocks/images/block_p.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2f0f661518f1dbda9eedda2b6bee734e" name="lib/form/doctrine/plugins/showblocks/images/block_pre.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="488e31c4e263fe308ef35b3feb005a5c" name="lib/form/doctrine/plugins/smiley/dialogs/smiley.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="afa3b9f5922ab14a29edaac876b9a5dd" name="lib/form/doctrine/plugins/smiley/images/angel_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7ba4d0e00161b200103f5ed77e3edff8" name="lib/form/doctrine/plugins/smiley/images/angry_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ef47bc5b95fcf4508c3b12cb4b5ca1e2" name="lib/form/doctrine/plugins/smiley/images/broken_heart.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="07bafe9896e8c3132b04b17f3c8d32fb" name="lib/form/doctrine/plugins/smiley/images/confused_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="65e506443085a5022a3f70ea5184b814" name="lib/form/doctrine/plugins/smiley/images/cry_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e5f58bf6ad852375b9ff4a41db2c4daf" name="lib/form/doctrine/plugins/smiley/images/devil_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="83f84ceb8be784840b7f8e49558095d8" name="lib/form/doctrine/plugins/smiley/images/embaressed_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="3ccafbc051beaa0dc224fb597e1d2264" name="lib/form/doctrine/plugins/smiley/images/envelope.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="8abe8f7fbbec2bf6e5e8c327ad3b6842" name="lib/form/doctrine/plugins/smiley/images/heart.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="97357230885c2224cabbda15e7a267d9" name="lib/form/doctrine/plugins/smiley/images/kiss.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ad387a2e0e7400ff09a84873839a86b6" name="lib/form/doctrine/plugins/smiley/images/lightbulb.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="81cfd8d8c979b7f3b2e733cc062077bd" name="lib/form/doctrine/plugins/smiley/images/omg_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="895f2ccbf133f411752cc847ff99a068" name="lib/form/doctrine/plugins/smiley/images/regular_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e6da33dd28666d0579fb56ccadc580da" name="lib/form/doctrine/plugins/smiley/images/sad_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0bb3a9a705f75a534f711ad6d5d9df2b" name="lib/form/doctrine/plugins/smiley/images/shades_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="572c5f85395a197237820c77018f16e2" name="lib/form/doctrine/plugins/smiley/images/teeth_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="50eb753262fa58d1ce5d8ac4108fe8d9" name="lib/form/doctrine/plugins/smiley/images/thumbs_down.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9c97cd1d759876471e3608df582fe8e9" name="lib/form/doctrine/plugins/smiley/images/thumbs_up.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="71c132b5a59e115289e350ce68114ba1" name="lib/form/doctrine/plugins/smiley/images/tounge_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="bed5fcb3b6414dd80cc065f1775b316c" name="lib/form/doctrine/plugins/smiley/images/whatchutalkingabout_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0dbb4bf6e7992a05bd9961acfa1f02d0" name="lib/form/doctrine/plugins/smiley/images/wink_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5a95a456aa59ea78d87fbe806850411e" name="lib/form/doctrine/plugins/specialchar/dialogs/specialchar.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="f97d3567cdbdf3b67af0b9b65ca8bdd4" name="lib/form/doctrine/plugins/specialchar/lang/en.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c3de8613a0a71704711697a29f8be487" name="lib/form/doctrine/plugins/styles/styles/default.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2973af32c293e97cceaed05a2c288c2d" name="lib/form/doctrine/plugins/table/dialogs/table.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6aeb7f159c7aff75f95033f3c53184c0" name="lib/form/doctrine/plugins/tableresize/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0ab70603a2e91af955993176385d3c96" name="lib/form/doctrine/plugins/tabletools/dialogs/tableCell.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a247a6c20a73d0b596f384e81db425d6" name="lib/form/doctrine/plugins/templates/dialogs/templates.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a18bcff79fd420677915727c681405bc" name="lib/form/doctrine/plugins/templates/templates/default.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="fc667c4366fe133c30ab122fe2ee7f20" name="lib/form/doctrine/plugins/templates/templates/images/template1.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="8a4d45166ebeef73e222270a8113d66f" name="lib/form/doctrine/plugins/templates/templates/images/template2.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b8650f06582ac88ece68948bac1bf734" name="lib/form/doctrine/plugins/templates/templates/images/template3.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ad02a39490c6b6540561811b6528028c" name="lib/form/doctrine/plugins/uicolor/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="83be344f9d97ac22ccfb90a07d128b04" name="lib/form/doctrine/plugins/uicolor/uicolor.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b6b59870094ff34ec8985a88b00a6f70" name="lib/form/doctrine/plugins/uicolor/dialogs/uicolor.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="848334afa6fe5871aaa115c9dbc3ed79" name="lib/form/doctrine/plugins/uicolor/lang/en.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="881756fbb100f6236cebed74407f8455" name="lib/form/doctrine/plugins/uicolor/lang/he.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2c3c8378b66be39375076e40769e3b2f" name="lib/form/doctrine/plugins/uicolor/yui/yui.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="73ae3465d3dcbd95ebb4165760fac8e8" name="lib/form/doctrine/plugins/uicolor/yui/assets/hue_bg.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b1a887427b558af46f17262784da3583" name="lib/form/doctrine/plugins/uicolor/yui/assets/hue_thumb.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a4d3b14fbcc5b8f112d3635f981d6a1c" name="lib/form/doctrine/plugins/uicolor/yui/assets/picker_mask.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="96aa37e578d0428346e4c7170ac9a230" name="lib/form/doctrine/plugins/uicolor/yui/assets/picker_thumb.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="46183c42586ce5a83b617e5a3ce672cd" name="lib/form/doctrine/plugins/uicolor/yui/assets/yui.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a66bb9ef95c88f7750729e88b5b85b5f" name="lib/form/doctrine/plugins/wsc/dialogs/ciframe.html" role="doc" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="85b5f257e6466ad74e99d07abf275c6c" name="lib/form/doctrine/plugins/wsc/dialogs/tmpFrameset.html" role="doc" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7d44f6e86a8e9e53a7989da2a99965d4" name="lib/form/doctrine/plugins/wsc/dialogs/wsc.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0be47516a0958855589c70a1c74c4c80" name="lib/form/doctrine/plugins/wsc/dialogs/wsc.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="cf69f3ee465ee1bc1af97610d1330476" name="lib/model/doctrine/PluginCategory.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="509610317c79453ff6a6a2c1a537eea4" name="lib/model/doctrine/PluginCategoryTable.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9715ec20346361494de1b16b721a231d" name="lib/model/doctrine/PluginCoupon.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="8634a164eea9c57d5d328b25ad3845fe" name="lib/model/doctrine/PluginCouponTable.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="4e0e680e638a73e6290f8b0bd15623eb" name="lib/model/doctrine/PluginProduct.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="79ab0f49a6afd59920b52023aedfee8e" name="lib/model/doctrine/PluginProductCategory.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="13d36be854fde90fc98816e2d6ec7aa5" name="lib/model/doctrine/PluginProductCategoryTable.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a6accbfadd7116400c03823fbfb521d2" name="lib/model/doctrine/PluginProductTable.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6e642d7eb979c3fdd4443968b0a0d611" name="lib/model/doctrine/PluginSettings.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="98be4771a2a498657a35b17b97ea0eb4" name="lib/model/doctrine/PluginSettingsTable.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="39d1b4a88a4cc078c0db4fa92adec8e1" name="lib/model/doctrine/PluginTax.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="280c84715cf2576f96ab19aa85a03361" name="lib/model/doctrine/PluginTaxTable.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="68f3f0dd142b622f3fa63d51f4347e78" name="lib/shipping/EstimatingService.wsdl" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="402aebdd2483be95f9ab558e2dfe2c9c" name="lib/shipping/purolator.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2db949cfb9ae9e1996a7c4bfc638ef8a" name="lib/shipping/ServiceAvailabilityService.wsdl" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9d6401a3e452dfa50a6663e770257b2e" name="lib/shipping/ups.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="14762527bc376d2dcd883037eca630df" name="lib/thumb/sfGDAdapter.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0de8bcaa60d8eb07dc365f8e5972156d" name="lib/thumb/thumb.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="085317bb3ed61f23adf2da2ef8c807df" name="modules/cart/actions/actions.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="065f3e8384ec61d97b34a9ba222bc12a" name="modules/cart/config/security.yml" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b7c5fcbae06b4a24dd442850f7eb762c" name="modules/cart/lib/BasecartActions.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="4803dff91af940fc57e5cc0ba9a54b1b" name="modules/cart/templates/checkoutSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7c5188bede712c6d36c3e1aa7ef6cbf4" name="modules/cart/templates/indexSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c10792b348df14279f061bd4038c93bf" name="modules/cart/templates/_cartItem.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="35c0788fd217e6347a9bce0dc283e57a" name="modules/cart/templates/_checkout.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2aba17a854884d9e34235809472bbc13" name="modules/cart/templates/_product.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="19161b15237dcca37fa2efc8be400764" name="modules/cart/templates/_productView.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b0bac830e6c0a16ca7b26f257c41fad7" name="modules/cartadmin/actions/actions.class.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5eb079517888b02ba4ed561e7ac09b94" name="modules/cartadmin/templates/categoryEditSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="18d48738e9740aa95c23c9effcd4f064" name="modules/cartadmin/templates/categoryIndexSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e47185d76aa9302052fdb06417061b5a" name="modules/cartadmin/templates/categoryNewSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="fbc8aed886032f655cb8c95ccbea07d3" name="modules/cartadmin/templates/couponEditSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c1a7f1232e165735a274470b1e81030f" name="modules/cartadmin/templates/couponIndexSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="09a7533cd874952daf91222c23f9d9cf" name="modules/cartadmin/templates/couponNewSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="985a289a9e0239406052388535d48be5" name="modules/cartadmin/templates/productEditSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a621351b4f3379c377ca4ff74f04389f" name="modules/cartadmin/templates/productIndexSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="58d3be397ff5e161b85d33bd24fb1668" name="modules/cartadmin/templates/productLinkSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="f4adfceb4b1fea3cfb40f450026abeb0" name="modules/cartadmin/templates/productNewSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="59ce382945d0fd0c6b3fbb142217a988" name="modules/cartadmin/templates/settingsIndexSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="1e869528f8662bcedac730940e9b1675" name="modules/cartadmin/templates/taxEditSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2a7871bbceee751cd42ae1d383b5b8c9" name="modules/cartadmin/templates/taxIndexSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="daae9822f51eea8ce372257f77e84780" name="modules/cartadmin/templates/taxNewSuccess.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="01432a183f39cdf5f186229872ee3462" name="modules/cartadmin/templates/_categoryForm.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="1852ea906cfbdc7d45bad991b009e114" name="modules/cartadmin/templates/_couponForm.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="46a932833bf04dc3ab3bbbe6a865989e" name="modules/cartadmin/templates/_menu.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="248ba1b9b4206fa6ab67ed8e36126604" name="modules/cartadmin/templates/_productFilterForm.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="bf336c88a2abd3691f3f712098c91c57" name="modules/cartadmin/templates/_productForm.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6bfb352c4d174c9f3a62f887b8399360" name="modules/cartadmin/templates/_taxForm.php" role="php" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="40bb329c2deb7ce393dd0dae76e42de4" name="web/css/cart.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="41a07bbd15031f259a582d23131ade16" name="web/images/add.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b89bda39ca904dae83e5c76fa15d23ac" name="web/images/arrow.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="26efbb3f978595799cca8e8ded8ec8bc" name="web/images/arrowcheckout.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="de29bf8d6b09e66981fad2d4bf4ffce4" name="web/images/ccAmex.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c68ae964115b6b5c5aa9d5ba83665fa7" name="web/images/ccDiscover.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="079e3931cf8fbf8a05aae62b29baf442" name="web/images/ccEcheck.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7deb4c4a939fe1d5eb218af361659b7b" name="web/images/ccMC.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2f80aa8e5a5a1e4c7fa634384812e74b" name="web/images/ccPayPal.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="264fbf4f1652d0ac4e2808b7ea49ee64" name="web/images/ccVisa.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="56e7f2cefcaa1068da2f0a4c27bcb190" name="web/images/checkout.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e129597544dbb63c288a236595a3c05f" name="web/images/crumb.jpg" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="687c06021d095a4315e5b37f375036e5" name="web/images/delete.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="8f588d7e34caf70606914740a77c758f" name="web/images/down.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="4d7fa8657117765ab4fd4b6bd989ad25" name="web/images/edit.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c5d6cc994432b0b645d7a28060aad648" name="web/images/indicator.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7eca478d5485210c2ae64fbce3334ad3" name="web/images/info.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="693f2d175cd0293dbef91f82fe62ced0" name="web/images/paypal.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="373189bc19df770307c629117f2dc84b" name="web/images/up.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a97dfaf2f86d3cf44b4b6f0e72e4e0d8" name="web/images/warning.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c4354156e5911d0033f5ab82dcc4faf2" name="web/js/cart.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="617cf0dcbbd977e9d994484f41db501f" name="web/js/cartadmin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b8fbafd197266c30167e503e6b924586" name="web/js/ckeditor.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="03c3a0c6463f4a5c2c776ec2e58d12b4" name="web/js/config.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="73a9c334c5ca71d70d092b42064f6476" name="web/js/jquery-1.4.4.min.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="106b7d445284e26d496fa6a0e0833e16" name="web/js/jquery-ui-1.8.9.custom.min.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e82a7bca2c561de3790788a01bd2a34f" name="web/js/jquery.tipsy.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7e8136e52589a5c146b3fea182977b01" name="web/js/jquery.ui.nestedSortable.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2aed5213484b8dc8f6175f057a810d36" name="web/js/lang/af.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="4d5ffb72dda4ae631c1eb1b04aba34c0" name="web/js/lang/ar.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9487a9e7eda303973cb2d0a6b510a319" name="web/js/lang/bg.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="d36467c2f2af8903ee52dd00fe476232" name="web/js/lang/bn.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="cc03273b17a7ab9c6b0ea07f877ea5a5" name="web/js/lang/bs.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="bd7d0935c49707e7ef3c941b3ac74932" name="web/js/lang/ca.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="1d50fb13d779741090e806ecddc031d1" name="web/js/lang/cs.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="646bdc1ea7190c4e37548acc9440cf62" name="web/js/lang/cy.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="925655608b1fd269c24a8997f4ae4722" name="web/js/lang/da.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="8afe43db0a8ea4df65e985d1195b5773" name="web/js/lang/de.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="20bce624e0366823f41d9d3b87aa84f7" name="web/js/lang/el.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="068bf2352340bdb93fbcd60bc9ec3e3e" name="web/js/lang/en-au.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e0790749d03ff4ae5acf777190adb444" name="web/js/lang/en-ca.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="3595f584a35535a3d77641957d30f85b" name="web/js/lang/en-gb.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="bd47dc324a2cec8a10299df6ad360e1f" name="web/js/lang/en.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c17b78e50b4520e8aeb313388ee1a824" name="web/js/lang/eo.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="81714836291fd69e6f575aeab2d32741" name="web/js/lang/es.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c929d31f27b954dcc5a3bbd27fa7a1c3" name="web/js/lang/et.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="cec5175144f4adbc700f84ae065b38f0" name="web/js/lang/eu.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="fe35de2b874d83595c1c2b808474f6b7" name="web/js/lang/fa.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="83daef1463cc02a58f450c4e5600b17a" name="web/js/lang/fi.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0b7677fed4786b619e33fcaea314f9e6" name="web/js/lang/fo.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="eec9f983658915ec6b5eb277d25bdd4b" name="web/js/lang/fr-ca.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="455b9b50a2261020d993e4db728ca337" name="web/js/lang/fr.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="bf1703434dffc13fe8aec6bd5bc1b4a6" name="web/js/lang/gl.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b4709bf5cd16431bebabf4c61ac7a7f3" name="web/js/lang/gu.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="f17a172879d0e7d5ca329447331dc803" name="web/js/lang/he.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2bd9ccd8f6f0e60a7c102f8e0443571b" name="web/js/lang/hi.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c1323c6273c9221da3692827c293c176" name="web/js/lang/hr.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b593f670c9adc75ef6f8d15d5bc140ba" name="web/js/lang/hu.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a02269e5a49d6778af14643c129428f6" name="web/js/lang/is.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="eb1858fee1acc805f9453dbc18c4e6ab" name="web/js/lang/it.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="d822f39a17cb92a22b8e160cced5a03e" name="web/js/lang/ja.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="14bb080af2fe1001c80daae14180bd8d" name="web/js/lang/km.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="efb7c33e648e70a8320db89ea0284586" name="web/js/lang/ko.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9ae1c76f0dca9d0560571d98a53395f8" name="web/js/lang/lt.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="73a3ca4668b4ba1896e674e8f55c376b" name="web/js/lang/lv.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="35e69433b218619a868158e0bf8aff13" name="web/js/lang/mn.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9ddee6032b1a774d537bc1bf51271dea" name="web/js/lang/ms.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="812b939ad5266978b1e32f7b15c69bd4" name="web/js/lang/nb.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="fdd1871e36dde218f5e49227b55df920" name="web/js/lang/nl.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="36b8ec7ccdc89cd020fb0c68b989f719" name="web/js/lang/no.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b9e62cd439978827545589390daec093" name="web/js/lang/pl.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="3ab7636910febd824addb7ee41eb68ed" name="web/js/lang/pt-br.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a2e7a690b6ec2bdc8a7d3a2e7b128b37" name="web/js/lang/pt.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="fec5561542190b13db82d740b24bc20c" name="web/js/lang/ro.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="1d9744e883d45950f957f49201edd335" name="web/js/lang/ru.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="62ef2f17b613f0a039600f128673a3ac" name="web/js/lang/sk.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="59172b2c3a1a3d5d54963901aaec4849" name="web/js/lang/sl.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e181e633b17f1e6ca9e8b65fd9b013be" name="web/js/lang/sr-latn.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7416b5d457210fc5adb670f599408d37" name="web/js/lang/sr.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="16329c3967fb348766abc2513514fc5a" name="web/js/lang/sv.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="af722b5f79a96b973271a09903321e8c" name="web/js/lang/th.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c0404873e845ae3719cfeb7fbd4fb969" name="web/js/lang/tr.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="bd07470cfcc76349a8fec70e97c441e2" name="web/js/lang/uk.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="304d330805182a4f15be65f18ba0a40e" name="web/js/lang/vi.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="82e8aee1f6e2948469a01e4280798428" name="web/js/lang/zh-cn.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="35dd444631a864854b850795a681fd32" name="web/js/lang/zh.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e9ce5e6efb6332a17841ebe48af35a2c" name="web/js/lang/_languages.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="d7e4c77f83ea797e2238d99202c11d04" name="web/js/lang/_translationstatus.txt" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="49d410e7498c37f6acddf2a575801cb7" name="web/js/plugins/a11yhelp/dialogs/a11yhelp.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7dcf914734d601e5bbc210a70e3d6d7f" name="web/js/plugins/a11yhelp/lang/en.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5536671cb65757696c99850106e1e43e" name="web/js/plugins/a11yhelp/lang/he.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="44ae86c2de16a2c66c5353eab3daa92e" name="web/js/plugins/about/dialogs/about.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="18203e6508e7cf786fb60093744881aa" name="web/js/plugins/about/dialogs/logo_ckeditor.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9fecbc148d70234d80891bff0e36587b" name="web/js/plugins/adobeair/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7b40f7b857f8a16f4e5440a928789313" name="web/js/plugins/autogrow/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="873525c23c8d30e10ec1a37d55ed7587" name="web/js/plugins/clipboard/dialogs/paste.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="157e97cd285fb09746cbf441110f3735" name="web/js/plugins/colordialog/dialogs/colordialog.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5ed2db81810f5e11458a6893831de470" name="web/js/plugins/dialog/dialogDefinition.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="f0e85b6cdbc9d05f007c67cc5146a78a" name="web/js/plugins/div/dialogs/div.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="3cf97473278d8d8121699762becacee3" name="web/js/plugins/find/dialogs/find.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2b2b9cbff9129bcf0aa45c704c9592f2" name="web/js/plugins/flash/dialogs/flash.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e9ac9384237d8d1cdaab68d31a22005d" name="web/js/plugins/flash/images/placeholder.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="953aada27e9b3e77a43aaee4600e46a9" name="web/js/plugins/forms/dialogs/button.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0fd1b32b312b12a2033f1123428e6de2" name="web/js/plugins/forms/dialogs/checkbox.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="3b26770e1c67dff9afcc6e6721c41355" name="web/js/plugins/forms/dialogs/form.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="27eb0afb684a58df8cd921c29cb87761" name="web/js/plugins/forms/dialogs/hiddenfield.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5a3037cc83525e33a958ffd33e8b89bf" name="web/js/plugins/forms/dialogs/radio.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="91941b91684e8694a4576b1795c107d8" name="web/js/plugins/forms/dialogs/select.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7777159fab52028c5fe3e53c7f6829c2" name="web/js/plugins/forms/dialogs/textarea.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="575200ca2082b9049c3beaba647f9e0c" name="web/js/plugins/forms/dialogs/textfield.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c724101436b085bf318e695fd784d658" name="web/js/plugins/forms/images/hiddenfield.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="cc53e759b5cef8114f26ca1510354352" name="web/js/plugins/iframe/dialogs/iframe.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="952e216a7803312fa67ee61c06f3c532" name="web/js/plugins/iframe/images/placeholder.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9a9c9dd9a205927f71bcc41ebfebb87f" name="web/js/plugins/iframedialog/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="694b9e97ca11cca56d3eb0dcc8e7bbc4" name="web/js/plugins/image/dialogs/image.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="31b3323b736d65a0269960da3de52f1c" name="web/js/plugins/link/dialogs/anchor.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9caf789fe7f587afd1c3f558062bd699" name="web/js/plugins/link/dialogs/link.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="60a2121d55f9238f529458ee5f2e6e4e" name="web/js/plugins/link/images/anchor.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="fc1f650dcf1ed1592bdb04e4768e98f7" name="web/js/plugins/liststyle/dialogs/liststyle.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="59caae8ab95b2eeba9444ba219446c75" name="web/js/plugins/pagebreak/images/pagebreak.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="8ade1cbdad2b791de72a8889e810d21b" name="web/js/plugins/pastefromword/filter/default.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="97c2a5d84276f719d6fc5502b734fdee" name="web/js/plugins/pastetext/dialogs/pastetext.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="090274dbcc2f5a50ea1086d948ca85ab" name="web/js/plugins/placeholder/placeholder.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="dff472ad724b8d2938958851a5aaf4dd" name="web/js/plugins/placeholder/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6ad1b35ed93c0bd016a7d0a2843e49a2" name="web/js/plugins/placeholder/dialogs/placeholder.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="39c5693e061c342e606e189f4f39f3c9" name="web/js/plugins/placeholder/lang/en.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9a79db98165b19ee9a06357afcb1c358" name="web/js/plugins/scayt/dialogs/options.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0f7afdba1e88aa091b63158eb5c16b2a" name="web/js/plugins/scayt/dialogs/toolbar.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5a24be2dbcae65e78db23bf732ae39fd" name="web/js/plugins/showblocks/images/block_address.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="198d39094c81152155f8f35108845bbe" name="web/js/plugins/showblocks/images/block_blockquote.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="05e8b4037cfbb469f9ddc37e8fc9e970" name="web/js/plugins/showblocks/images/block_div.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2c56066f59944c0167a8e4321f193913" name="web/js/plugins/showblocks/images/block_h1.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="060e9e0bb5a4e5dc1fe0d2fb20b2c801" name="web/js/plugins/showblocks/images/block_h2.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5468e59e8840a0a6799d6db5d36733dc" name="web/js/plugins/showblocks/images/block_h3.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6c65bfeac7e5b5b28af498f2d757f3f0" name="web/js/plugins/showblocks/images/block_h4.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="4f196e19ed8ad0fdd14cb73c93fee1ab" name="web/js/plugins/showblocks/images/block_h5.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="dde71309b78bdb3b366654446adea123" name="web/js/plugins/showblocks/images/block_h6.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b4f2152a14d790847565aa176161acab" name="web/js/plugins/showblocks/images/block_p.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2f0f661518f1dbda9eedda2b6bee734e" name="web/js/plugins/showblocks/images/block_pre.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="488e31c4e263fe308ef35b3feb005a5c" name="web/js/plugins/smiley/dialogs/smiley.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="afa3b9f5922ab14a29edaac876b9a5dd" name="web/js/plugins/smiley/images/angel_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7ba4d0e00161b200103f5ed77e3edff8" name="web/js/plugins/smiley/images/angry_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ef47bc5b95fcf4508c3b12cb4b5ca1e2" name="web/js/plugins/smiley/images/broken_heart.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="07bafe9896e8c3132b04b17f3c8d32fb" name="web/js/plugins/smiley/images/confused_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="65e506443085a5022a3f70ea5184b814" name="web/js/plugins/smiley/images/cry_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e5f58bf6ad852375b9ff4a41db2c4daf" name="web/js/plugins/smiley/images/devil_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="83f84ceb8be784840b7f8e49558095d8" name="web/js/plugins/smiley/images/embaressed_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="3ccafbc051beaa0dc224fb597e1d2264" name="web/js/plugins/smiley/images/envelope.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="8abe8f7fbbec2bf6e5e8c327ad3b6842" name="web/js/plugins/smiley/images/heart.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="97357230885c2224cabbda15e7a267d9" name="web/js/plugins/smiley/images/kiss.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ad387a2e0e7400ff09a84873839a86b6" name="web/js/plugins/smiley/images/lightbulb.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="81cfd8d8c979b7f3b2e733cc062077bd" name="web/js/plugins/smiley/images/omg_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="895f2ccbf133f411752cc847ff99a068" name="web/js/plugins/smiley/images/regular_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e6da33dd28666d0579fb56ccadc580da" name="web/js/plugins/smiley/images/sad_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0bb3a9a705f75a534f711ad6d5d9df2b" name="web/js/plugins/smiley/images/shades_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="572c5f85395a197237820c77018f16e2" name="web/js/plugins/smiley/images/teeth_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="50eb753262fa58d1ce5d8ac4108fe8d9" name="web/js/plugins/smiley/images/thumbs_down.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9c97cd1d759876471e3608df582fe8e9" name="web/js/plugins/smiley/images/thumbs_up.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="71c132b5a59e115289e350ce68114ba1" name="web/js/plugins/smiley/images/tounge_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="bed5fcb3b6414dd80cc065f1775b316c" name="web/js/plugins/smiley/images/whatchutalkingabout_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0dbb4bf6e7992a05bd9961acfa1f02d0" name="web/js/plugins/smiley/images/wink_smile.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5a95a456aa59ea78d87fbe806850411e" name="web/js/plugins/specialchar/dialogs/specialchar.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="f97d3567cdbdf3b67af0b9b65ca8bdd4" name="web/js/plugins/specialchar/lang/en.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c3de8613a0a71704711697a29f8be487" name="web/js/plugins/styles/styles/default.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2973af32c293e97cceaed05a2c288c2d" name="web/js/plugins/table/dialogs/table.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6aeb7f159c7aff75f95033f3c53184c0" name="web/js/plugins/tableresize/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0ab70603a2e91af955993176385d3c96" name="web/js/plugins/tabletools/dialogs/tableCell.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a247a6c20a73d0b596f384e81db425d6" name="web/js/plugins/templates/dialogs/templates.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a18bcff79fd420677915727c681405bc" name="web/js/plugins/templates/templates/default.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="fc667c4366fe133c30ab122fe2ee7f20" name="web/js/plugins/templates/templates/images/template1.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="8a4d45166ebeef73e222270a8113d66f" name="web/js/plugins/templates/templates/images/template2.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b8650f06582ac88ece68948bac1bf734" name="web/js/plugins/templates/templates/images/template3.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ad02a39490c6b6540561811b6528028c" name="web/js/plugins/uicolor/plugin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="83be344f9d97ac22ccfb90a07d128b04" name="web/js/plugins/uicolor/uicolor.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b6b59870094ff34ec8985a88b00a6f70" name="web/js/plugins/uicolor/dialogs/uicolor.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="848334afa6fe5871aaa115c9dbc3ed79" name="web/js/plugins/uicolor/lang/en.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="881756fbb100f6236cebed74407f8455" name="web/js/plugins/uicolor/lang/he.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="2c3c8378b66be39375076e40769e3b2f" name="web/js/plugins/uicolor/yui/yui.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="73ae3465d3dcbd95ebb4165760fac8e8" name="web/js/plugins/uicolor/yui/assets/hue_bg.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="b1a887427b558af46f17262784da3583" name="web/js/plugins/uicolor/yui/assets/hue_thumb.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a4d3b14fbcc5b8f112d3635f981d6a1c" name="web/js/plugins/uicolor/yui/assets/picker_mask.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="96aa37e578d0428346e4c7170ac9a230" name="web/js/plugins/uicolor/yui/assets/picker_thumb.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="46183c42586ce5a83b617e5a3ce672cd" name="web/js/plugins/uicolor/yui/assets/yui.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="a66bb9ef95c88f7750729e88b5b85b5f" name="web/js/plugins/wsc/dialogs/ciframe.html" role="doc" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="85b5f257e6466ad74e99d07abf275c6c" name="web/js/plugins/wsc/dialogs/tmpFrameset.html" role="doc" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7d44f6e86a8e9e53a7989da2a99965d4" name="web/js/plugins/wsc/dialogs/wsc.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0be47516a0958855589c70a1c74c4c80" name="web/js/plugins/wsc/dialogs/wsc.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="34136c8a1415d876bce19379db641d6d" name="web/js/skins/kama/dialog.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5285c43137933dcbe8a9489044c3add3" name="web/js/skins/kama/editor.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c95409aa0037202b7f586b6b12ae02c6" name="web/js/skins/kama/icons.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="970934c79d8500bb81c20216b053cc32" name="web/js/skins/kama/icons_rtl.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="d39df1f3d9b8296a8f9ab2715802090f" name="web/js/skins/kama/skin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="9883d94c2df4d5449f0566498e43d249" name="web/js/skins/kama/templates.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="120d7ec1d25b985eeaa6b8e33cfe532b" name="web/js/skins/kama/images/dialog_sides.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0de8d3f444ad57c6afbc6a624b0c61ca" name="web/js/skins/kama/images/dialog_sides.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e196c7bb02d6f68a3b7c912e9d711de9" name="web/js/skins/kama/images/dialog_sides_rtl.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="44047e297a6b8de4c228e763b2fcd89a" name="web/js/skins/kama/images/mini.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="77404b5590596de508a542979f3cda84" name="web/js/skins/kama/images/noimage.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="cbd4af5841f83007604ac6d065c4613d" name="web/js/skins/kama/images/sprites.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="395ae7f33fedb1b7262819ebe78d13c3" name="web/js/skins/kama/images/sprites_ie6.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7ed13749e9da48abea49e9b22543120b" name="web/js/skins/kama/images/toolbar_start.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="502c59c88a09a24a845e5334610e7091" name="web/js/skins/office2003/dialog.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="cf5c80abfbd7fada63444b5c9d7d3b85" name="web/js/skins/office2003/editor.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c95409aa0037202b7f586b6b12ae02c6" name="web/js/skins/office2003/icons.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="970934c79d8500bb81c20216b053cc32" name="web/js/skins/office2003/icons_rtl.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="12c4835eca2d912d28378e6aedc87596" name="web/js/skins/office2003/skin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="91fb7c6dbd2640d8512caab78b3d5512" name="web/js/skins/office2003/templates.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0347236eef1ae590f8f4da8d88d050d3" name="web/js/skins/office2003/images/dialog_sides.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="5d0bbcdceb4481aaaeb7ff71dd4914bb" name="web/js/skins/office2003/images/dialog_sides.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0fcc85e6acee7187a44a23986bc100e8" name="web/js/skins/office2003/images/dialog_sides_rtl.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="44047e297a6b8de4c228e763b2fcd89a" name="web/js/skins/office2003/images/mini.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="77404b5590596de508a542979f3cda84" name="web/js/skins/office2003/images/noimage.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0731d9e08b9e4d149f4661b9709933e5" name="web/js/skins/office2003/images/sprites.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ffaadb679efeed501a4966737f5266bb" name="web/js/skins/office2003/images/sprites_ie6.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0b61e274fbed0b0d029a89da7af3f465" name="web/js/skins/v2/dialog.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="1b40fdff621e8f6c42a64e53bc91297b" name="web/js/skins/v2/editor.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="c95409aa0037202b7f586b6b12ae02c6" name="web/js/skins/v2/icons.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="970934c79d8500bb81c20216b053cc32" name="web/js/skins/v2/icons_rtl.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="1e15116e104193368eb67a99427056f4" name="web/js/skins/v2/skin.js" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="ce67cfd5360337bece05f23f5c38216c" name="web/js/skins/v2/templates.css" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="120d7ec1d25b985eeaa6b8e33cfe532b" name="web/js/skins/v2/images/dialog_sides.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="0de8d3f444ad57c6afbc6a624b0c61ca" name="web/js/skins/v2/images/dialog_sides.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e196c7bb02d6f68a3b7c912e9d711de9" name="web/js/skins/v2/images/dialog_sides_rtl.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="44047e297a6b8de4c228e763b2fcd89a" name="web/js/skins/v2/images/mini.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="77404b5590596de508a542979f3cda84" name="web/js/skins/v2/images/noimage.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e9cb60b2b93872cd702e33d17da269b6" name="web/js/skins/v2/images/sprites.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="88d77395886275b135ba7c79beaed481" name="web/js/skins/v2/images/sprites_ie6.png" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="7ed13749e9da48abea49e9b22543120b" name="web/js/skins/v2/images/toolbar_start.gif" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="6b4c2bfde2000672c7c9e86a50881680" name="LICENSE" role="data" />
+   <file baseinstalldir="/sfCartPlugin" md5sum="e131e6a359ab4be68bfd87222a5a468c" name="README" role="data" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.4.0</min>
+    <max>1.5.0</max>
+    <exclude>1.5.0</exclude>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.2</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2011-04-23</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+* Fixed problem with cart not showing up after adding items.
+   </notes>
+  </release>
+ </changelog>
+</package>

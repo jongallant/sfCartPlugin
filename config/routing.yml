@@ -1,0 +1,21 @@
+category:
+  url: /store/:crumb
+  param: { module: cart, action: index }
+  requirements:
+    crumb: .*
+    
+store:
+  url: /
+  param: { module: cart, action: index }
+  
+cartadmin:
+  url: /cartadmin
+  param: { module: cartadmin, action: productIndex }
+
+updatecart:
+  url:  /updatecart
+  param: { module: cart, action: update }
+
+checkout:
+  url: /checkout
+  param: { module: cart, action: checkout }

@@ -1,0 +1,198 @@
+Product:
+  1:
+    id: 1
+    name: Apple
+    code: 0123456789
+    description: 
+    weight: 10
+    quantity: 100
+    price: 235.99
+    active: 1
+  2:
+    id: 2
+    name: Banana
+    code: 2312312
+    description: 
+    weight: 10
+    quantity: 100
+    price: 5.77
+    active: 1
+  3:
+    id: 3
+    name: Carrot
+    code: 0123456789
+    description: 
+    weight: 10
+    quantity: 100
+    price: 3.44
+    active: 1
+
+ProductCategory:
+  1:
+    product_id: 1
+    category_id: 1
+
+Category:
+  Category_1:
+    name: Categories
+    active: true
+    slug: categories
+    root_id: 1
+    lft: '1'
+    rgt: '40'
+    level: '0'
+
+Tax:
+  1:
+    region_code: "AL"
+    rate: 4
+  2:
+    region_code: "AK"
+    rate: 0
+  3:
+    region_code: "AZ"
+    rate: 5.6
+  4:
+    region_code: "AR"
+    rate: 6
+  5:
+    region_code: "CA"
+    rate: 7.25
+  6:
+    region_code: "CO"
+    rate: 2.9
+  7:
+    region_code: "CT"
+    rate: 6
+  8:
+    region_code: "DE"
+    rate: 0
+  9:
+    region_code: "DC"
+    rate: 5.75
+  10:
+    region_code: "FL"
+    rate: 6
+  11:
+    region_code: "GA"
+    rate: 4
+  12:
+    region_code: "HI"
+    rate: 4
+  13:
+    region_code: "ID"
+    rate: 6
+  14:
+    region_code: "IL"
+    rate: 6.25
+  15:
+    region_code: "IN"
+    rate: 7
+  16:
+    region_code: "IA"
+    rate: 6
+  17:
+    region_code: "KS"
+    rate: 5.3
+  18:
+    region_code: "KY"
+    rate: 6
+  19:
+    region_code: "LA"
+    rate: 4
+  20:
+    region_code: "ME"
+    rate: 5
+  21:
+    region_code: "MD"
+    rate: 6
+  22:
+    region_code: "MA"
+    rate: 5
+  23:
+    region_code: "MI"
+    rate: 6
+  24:
+    region_code: "MN"
+    rate: 6.875
+  25:
+    region_code: "MS"
+    rate: 7
+  26:
+    region_code: "MO"
+    rate: 4.225
+  27:
+    region_code: "MT"
+    rate: 0
+  28:
+    region_code: "NE"
+    rate: 5.5
+  29:
+    region_code: "NV"
+    rate: 6.85 
+  30:
+    region_code: "NH"
+    rate: 0
+  31:
+    region_code: "NJ"
+    rate: 7
+  32:
+    region_code: "NM"
+    rate: 5
+  33:
+    region_code: "NY"
+    rate: 4
+  34:
+    region_code: "NC"
+    rate: 4.5
+  35:
+    region_code: "ND"
+    rate: 5
+  36:
+    region_code: "OH"
+    rate: 5.5
+  37:
+    region_code: "OK"
+    rate: 4.5
+  38:
+    region_code: "OR"
+    rate: 0
+  39:
+    region_code: "PA"
+    rate: 6 
+  40:
+    region_code: "RI"
+    rate: 7
+  41:
+    region_code: "SC"
+    rate: 6
+  42:
+    region_code: "SD"
+    rate: 4
+  43:
+    region_code: "TN"
+    rate: 7
+  44:
+    region_code: "TX"
+    rate: 6.25
+  45:
+    region_code: "UT"
+    rate: 4.7
+  46:
+    region_code: "VT"
+    rate: 6
+  47:
+    region_code: "VA"
+    rate: 4
+  48:
+    region_code: "WA"
+    rate: 6.5
+  49:
+    region_code: "WV"
+    rate: 6 
+  50:
+    region_code: "WI"
+    rate: 5
+  51:
+    region_code: "WY"
+    rate: 4
