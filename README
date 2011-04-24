@@ -1,0 +1,110 @@
+# sfCart Plugin (for symfony 1.4) #
+
+The `sfCartPlugin` is a symfony plugin that provides a e-commerce solution to your symfony projects.
+The plugin provides a frontend cart system, and a backend administration system.  
+
+## Features ##
+
+  * Cart system
+  * Simple store administration 
+  * UPS shipping calculator (United States)
+  * Purolator shipping calculator (Canada)
+  * Paypal Standard Checkout
+  * NestedSet categories
+  * Coupon codes
+  * Custom tax rates
+  * Much more
+
+  
+## Installation ##
+
+  * Install the plugin (via a package)
+
+        symfony plugin:install sfCartPlugin
+    
+  * If that doesn't work for some reason, you can try installing the plugin manually.  Download the plugin, and run the same command specifying the file location:
+        
+        symfony plugin:install sfCartPlugin.tgz
+  
+  * Activate the plugin in the `config/ProjectConfiguration.class.php`.
+  
+        [php]
+        class ProjectConfiguration extends sfProjectConfiguration
+        {
+          public function setup()
+          {
+            $this->enablePlugins(array(
+              'sfDoctrinePlugin', 
+              'sfCartPlugin',
+              '...'
+            ));
+          }
+        }
+    
+  * Enable the modules in your frontend, by editing apps/frontend/config/settings.yml
+          
+        all:
+          .settings:
+            enabled_modules:       [cart]
+  
+  * Enable the administration module in your backend.  You can enable it in any application you want, just ensure that you secure it.  Add the following to apps/frontend/config/settings.yml:
+        
+        all:
+          .settings:
+            enabled_modules:       [cartadmin]
+  
+  * Build the database, and load the dummy data.  This command rebuilds your existing database:
+
+        php symfony doctrine:build --all --and-load
+
+  * Create a symbolic link to the sfCartPlugin images, css and javascript files:
+        
+        php symfony plugin:publish-assets
+    
+  * Include the sfCart CSS and javascript for the frontend (You can use your own download of jQuery if you prefer, but both jQuery and jQueryUI are provided).
+    For the frontend, edit the file /apps/frontend/template/layout.php:
+  
+        [php]
+        <?php use_stylesheet("/sfCartPlugin/css/cart.css") ?>    
+        <?php use_javascript("/sfCartPlugin/js/jquery-1.4.4.min.js") ?>  
+        <?php use_javascript("/sfCartPlugin/js/jquery-ui-1.8.9.custom.min.js") ?> 
+        <?php use_javascript("/sfCartPlugin/js/cart.js") ?> 
+        
+        <?php include_stylesheets() ?>
+        <?php include_javascripts() ?>
+
+    For the backend, edit the file /apps/backend/template/layout.php:
+    
+        [php]
+        <?php use_stylesheet("/sfCartPlugin/css/cart.css") ?>    
+        <?php use_javascript("/sfCartPlugin/js/jquery-1.4.4.min.js") ?>  
+        <?php use_javascript("/sfCartPlugin/js/jquery-ui-1.8.9.custom.min.js") ?> 
+        <?php use_javascript("/sfCartPlugin/js/jquery.tipsy.js") ?>   
+        <?php use_javascript("/sfCartPlugin/js/ckeditor.js") ?>                
+        <?php use_javascript("/sfCartPlugin/js/cartadmin.js") ?>
+        <?php use_javascript("/sfCartPlugin/js/jquery.ui.nestedSortable.js") ?>
+        
+        <?php include_stylesheets() ?>
+        <?php include_javascripts() ?>
+        
+
+ 
+## Code Changes ##
+
+Although a lot of work has already been put into this plugin, a lot more needs to be done.  There are plans to move configurable items into the "Settings" section in the future.
+For the time being, you will need to be able to read and change code in order to get the most out of this plugin. 
+Here are the critical code lines that you need to be aware of:
+
+  * Mailer information - /sfCartPlugin/lib/OrderMessage.class.php
+        line 22, 23  --  Enter your mailer information
+
+  * Purolator shipping information - /sfCartPlugin/lib/shipping/purolator.class.php
+        lines 3,4,5,6  --  Enter your Purolator account credentials
+        lines 13, 38   --  Enter absolute path to wsdl files.  Relative does not work here.
+        lines 90 to 99 --  Enter your Purolator account information
+
+  * UPS shipping information - /sfCartPlugin/lib/shipping/ups.class.php
+        line 28  --  Enter shipper's zipcode
+
+
+
