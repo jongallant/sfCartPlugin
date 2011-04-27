@@ -50,38 +50,20 @@
 			echo "<form method='post' action='/checkout' id='shippingquotes'>";
 			echo "<span>PLEASE SELECT A SHIPPING METHOD</span>";
 			echo "<div style='clear:both'></div>";
-			/*purolator
-			if ($cart->region=="CA") {
-				while ($quote = current($cart->quotes)) {
-					echo "<div class='shippingquoterow'>";
-					echo "<label>". $quote[0]."</label>";
-					if (($quote[1] == $cart->selectedQuoteAmount) and ($unchecked)) { echo "<input type='radio' checked='checked' class='quoteradio' name='shipquotes' value='".$quote[1]."' />"; $unchecked = false; }
-					else { echo "<input type='radio' class='quoteradio' name='shipquotes' value='".$quote[1]."' />"; }
-					echo "<div class='quoteamount'>&#36;".number_format($quote[1],2)."</div>";
-					echo "<div style='clear:both'></div>";
-					echo "</div>";
-					next($cart->quotes);
-				}
-			}
-		  //ups
-			//elseif ($cart->region=="US") { */
-       
-				//while ($quote = current($cart->quotes)) {
-        $quotes = $cart->getShippingQuotes();
-        foreach ($quotes as $key => $quote) {
 
-					echo "<div class='shippingquoterow'>";
-					echo "<label>UPS ".$key."</label>";
-					if (($quote == $cart->getSelectedQuote()) and ($unchecked)) { echo "<input type='radio' checked='checked' class='quoteradio' name='shipquotes' value='".$quote."' />"; $unchecked = false; }
-					else { echo "<input type='radio' class='quoteradio' name='shipquotes' value='".$quote."' />"; }
-					echo "<div class='quoteamount'>&#36;".number_format($quote,2)."</div>";
-					echo "<div style='clear:both'></div>";
-					echo "</div>";
-					next($quotes);
-          
-				}
+	    $quotes = $cart->getShippingQuotes();
+	    
+	    foreach ($quotes as $key => $quote) {
+				echo "<div class='shippingquoterow'>";
+				echo "<label>UPS ".$key."</label>";
+				if (($quote == $cart->getSelectedQuote()) and ($unchecked)) { echo "<input type='radio' checked='checked' class='quoteradio' name='shipquotes' value='".$quote."' />"; $unchecked = false; }
+				else { echo "<input type='radio' class='quoteradio' name='shipquotes' value='".$quote."' />"; }
+				echo "<div class='quoteamount'>&#36;".number_format($quote,2)."</div>";
+				echo "<div style='clear:both'></div>";
+				echo "</div>";
+				next($quotes);
+			}
        
-			//}			
 			echo "<input type='submit' src='/crs/checkout' id='shippingselect' name='shipselect' value='Save Changes' class='save'/>";
 			echo "<div style='clear:both'></div>";
 			echo "</form>";

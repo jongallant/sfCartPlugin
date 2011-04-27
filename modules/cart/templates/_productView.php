@@ -3,26 +3,11 @@ $torender = array();
 $count = 0;
 
 foreach ($product->getCategories() as $category) {
-
   $crumbs = explode("/", $category->getCrumb());
-  //print_r($crumbs);
   $torender[$count] = $crumbs;
   $count++;
-  
-  
-  /*$level = $category->getLevel();
-  $p = $category;
-  while ($p->getLevel() != 1) {
-    $p = $p->getNode()->getParent();
-  }
-*/
-  
 }
-//print_r($torender);
-
 ?>
-
-
 
 <div class="sfcart_product">     
   <form method="post" action="/updatecart">

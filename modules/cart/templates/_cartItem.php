@@ -1,5 +1,4 @@
 <div class="sfcart_item">
-
 	<?php if ($item['photo_path'] == "") { ?>
 		<div class='noimagetiny'><p>No image</p></div>
 	<?php } else { ?>

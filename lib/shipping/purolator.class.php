@@ -4,87 +4,84 @@ define("PRODUCTION_KEY", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 define("PRODUCTION_PASS", "xxxxxxx]");
 define("BILLING_ACCOUNT", "xxxxxx");
 define("REGISTERED_ACCOUNT", "xxxxxx");
-	
+
 class purolator{
 
-  var $postalcode, $city, $province, $totalWeight, $itemCount, $quotes, $selectedQuote;
-  
+	var $postalcode, $city, $province, $totalWeight, $itemCount, $quotes, $selectedQuote;
+
 	function createAvailabilityClient() {
-		$client = new SoapClient( "ServiceAvailabilityService.wsdl", 
-			array	(
+		$client = new SoapClient( "ServiceAvailabilityService.wsdl",
+		array	(
         'trace'			=>	true,
 				'location'	=>	"https://webservices.purolator.com/PWS/V1/ServiceAvailability/ServiceAvailabilityService.asmx",
-				#'location'	=>	"https://devwebservices.purolator.com/PWS/V1/ServiceAvailability/ServiceAvailabilityService.asmx",
+		#'location'	=>	"https://devwebservices.purolator.com/PWS/V1/ServiceAvailability/ServiceAvailabilityService.asmx",
         'uri'				=>	"http://purolator.com/pws/datatypes/v1",
         'login'			=>	PRODUCTION_KEY,
         'password'	=>	PRODUCTION_PASS
-      )
-    );
-		$headers[] = new SoapHeader ( 'http://purolator.com/pws/datatypes/v1', 
+		)
+		);
+		$headers[] = new SoapHeader ( 'http://purolator.com/pws/datatypes/v1',
       'RequestContext', 
-      array (
+		array (
               'Version'           =>  '1.0',
               'Language'          =>  'en',
               'GroupID'           =>  'xxx',
               'RequestReference'  =>  'Rating Example'
-      )
-    );                      
-		$client->__setSoapHeaders($headers);
-		return $client;
+              )
+              );
+              $client->__setSoapHeaders($headers);
+              return $client;
 	}
-	
+
 	function createRatesClient(){
 
-		$client = new SoapClient( "EstimatingService.wsdl", 
-			array	(
+		$client = new SoapClient( "EstimatingService.wsdl",
+		array	(
 				'trace'			=>	true,
         'location'	=>	"https://webservices.purolator.com/PWS/V1/Estimating/EstimatingService.asmx",
-        #'location'	=>	"https://devwebservices.purolator.com/PWS/V1/Estimating/EstimatingService.asmx",
+		#'location'	=>	"https://devwebservices.purolator.com/PWS/V1/Estimating/EstimatingService.asmx",
         'uri'				=>	"http://purolator.com/pws/datatypes/v1",
         'login'			=>	PRODUCTION_KEY,
         'password'	=>	PRODUCTION_PASS
-      )
-    );
-		$headers[] = new SoapHeader ( 'http://purolator.com/pws/datatypes/v1', 
+		)
+		);
+		$headers[] = new SoapHeader ( 'http://purolator.com/pws/datatypes/v1',
         'RequestContext', 
-        array (
+		array (
                 'Version'           =>  '1.0',
                 'Language'          =>  'en',
                 'GroupID'           =>  'xxx',
                 'RequestReference'  =>  'Rating Example'
-        )
-    );                       
-		$client->__setSoapHeaders($headers);
-		return $client;
+                )
+                );
+                $client->__setSoapHeaders($headers);
+                return $client;
 	}
-	
+
 	function getLocation($postalCode) 	{
 		$postalCode = str_replace("-","",$postalCode);
 		$postalCode = str_replace(" ","",$postalCode);
-	
+
 		$client = $this->createAvailabilityClient();
 
 		$request->Addresses->ShortAddress->Country = "CA";
-		$request->Addresses->ShortAddress->PostalCode = $postalCode;		
+		$request->Addresses->ShortAddress->PostalCode = $postalCode;
 
 		if ($this->postalcode != $postalCode) {
-      $response = $client->ValidateCityPostalCodeZip($request);
+			$response = $client->ValidateCityPostalCodeZip($request);
 			$this->postalcode = $postalCode;
 			$this->city = $response->SuggestedAddresses->SuggestedAddress->Address->City;
 			$this->province = $response->SuggestedAddresses->SuggestedAddress->Address->Province;
-      //$this->totalWeight = $cartWeight;
-      //$this->itemCount = $cartItemCount;
-			//$this->updateRates($cartWeight, $cartItemCount);
 		}
-		if (($this->city != "") and ($this->province != "")) { return $this->city . ", " . $this->province; } 
+		if (($this->city != "") and ($this->province != "")) { return $this->city . ", " . $this->province; }
 		else { return null; }
-	}	
-	
+	}
+
 	function updateRates($cartWeight, $cartItemCount){
 
-    $this->totalWeight = $cartWeight;
-    $this->itemCount = $cartItemCount;
-  
+		$this->totalWeight = $cartWeight;
+		$this->itemCount = $cartItemCount;
+
 		$client = $this->createRatesClient();
 
 		$request->Shipment->SenderInformation->Address->Name = "";
@@ -93,7 +90,7 @@ class purolator{
 		$request->Shipment->SenderInformation->Address->City = "";
 		$request->Shipment->SenderInformation->Address->Province = "";
 		$request->Shipment->SenderInformation->Address->Country = "CA";
-		$request->Shipment->SenderInformation->Address->PostalCode = "";    
+		$request->Shipment->SenderInformation->Address->PostalCode = "";
 		$request->Shipment->SenderInformation->Address->PhoneNumber->CountryCode = "1";
 		$request->Shipment->SenderInformation->Address->PhoneNumber->AreaCode = "";
 		$request->Shipment->SenderInformation->Address->PhoneNumber->Phone = "";
@@ -139,7 +136,7 @@ class purolator{
 				{
 					//Get quote price
 					$this->quotes[$i][1] = $estimate->TotalPrice;
-					
+
 					//Get Quote Name
 					if ($estimate->ServiceID == "PurolatorExpress") { $this->quotes[$i][0] = "Purolator Express"; }
 					else if ($estimate->ServiceID == "PurolatorExpress10:30AM") { $this->quotes[$i][0] = "Purolator Express 10:30AM";}
@@ -154,22 +151,22 @@ class purolator{
 			sort($this->quotes);
 		}
 	}
-	
-	function getSelectedQuote(){ return $this->selectedQuote; }	
-	
+
+	function getSelectedQuote(){ return $this->selectedQuote; }
+
 	function calcBestRate() {
-    $this->selectedQuote = 0;
+		$this->selectedQuote = 0;
 		if (sizeof($this->quotes) > 0) {
 			if ($this->selectedQuote == 0) { $this->selectedQuote = $this->quotes[sizeof($this->quotes)-1][1]; } //list sorted, 1st one is best
 			for ($i=sizeof($this->quotes)-1; $i>=0; $i--){                                                        //loop just to make sure
-					if ($this->selectedQuote > $this->quotes[$i][1]) { $this->selectedQuote = $this->quotes[$i][1]; }
-      }
+				if ($this->selectedQuote > $this->quotes[$i][1]) { $this->selectedQuote = $this->quotes[$i][1]; }
+			}
 		}
 		return $this->selectedQuote;
 	}
-	
+
 }
-	
+
 
 
 ?>

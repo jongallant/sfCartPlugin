@@ -89,22 +89,25 @@ The plugin provides a frontend cart system, and a backend administration system.
         
 
  
-## Code Changes ## 
+## Code Changes ##
 
 Although a lot of work has already been put into this plugin, a lot more needs to be done.  There are plans to move configurable items into the "Settings" section in the future.
 For the time being, you will need to be able to read and change code in order to get the most out of this plugin. 
 Here are the critical code lines that you need to be aware of:
 
-  * Mailer information - /sfCartPlugin/lib/OrderMessage.class.php
-        line 22, 23  --  Enter your mailer information
+### Mailer information - /sfCartPlugin/lib/OrderMessage.class.php ###
+	
+	* line 22, 23  --  Enter your mailer information
 
-  * Purolator shipping information - /sfCartPlugin/lib/shipping/purolator.class.php
-        lines 3,4,5,6  --  Enter your Purolator account credentials
-        lines 13, 38   --  Enter absolute path to wsdl files.  Relative does not work here.
-        lines 90 to 99 --  Enter your Purolator account information
+### Purolator shipping information - /sfCartPlugin/lib/shipping/purolator.class.php ### 
 
-  * UPS shipping information - /sfCartPlugin/lib/shipping/ups.class.php
-        line 28  --  Enter shipper's zipcode
+	* lines 3,4,5,6  --  Enter your Purolator account credentials
+	* lines 13, 38   --  Enter absolute path to wsdl files.  Relative does not work here.
+	* lines 90 to 99 --  Enter your Purolator account information
+
+### UPS shipping information - /sfCartPlugin/lib/shipping/ups.class.php ### 
+
+	* line 28  --  Enter shipper's zipcode
 
 
-
+test

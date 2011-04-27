@@ -2,7 +2,7 @@
 
 /**
  * sfCartPlugin configuration.
- * 
+ *
  * @package     sfCartPlugin
  * @subpackage  config
  * @author      Your name here
@@ -10,12 +10,12 @@
  */
 class sfCartPluginConfiguration extends sfPluginConfiguration
 {
-  const VERSION = '1.0.0-DEV';
+	const VERSION = '1.0.0-DEV';
 
-  /**
-   * @see sfPluginConfiguration
-   */
-  public function initialize()
-  {
-  }
+	/**
+	 * @see sfPluginConfiguration
+	 */
+	public function initialize()
+	{
+	}
 }
